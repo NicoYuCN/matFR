@@ -6,7 +6,7 @@
 
 #### Background
 
-  To collect thousands of features becomes feasible in medical imaging and biology, and thus, 
+  To collect thousands of features is feasible in medical imaging and biology, and thus, 
 how to figure out these informative and discriminative ones becomes urgently important. 
   The purpose of this project is to collect feature ranking (FR) methods, to provide a platform 
 easy-to-use for potential researchers, and to call for designers online-sharing their previously 
