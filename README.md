@@ -44,10 +44,14 @@ selected to quantify the lesions from mass intensity, contour shape and lesion t
 lesions, 230 are histologically verified benign (y = 0) and 176 are malignant (y = 1). Thus, to the input 
 matrix X, m = 736 and n = 17. After the data is prepared, one line code to activate the Laplacian Score 
 algorithm [4], an unsupervised method, is shown as below,
-            r = matFR_interface ( X, ‘h2_fir_laplacian_score ’ );
+
+#####  r = matFR_interface ( X, ‘h2_fir_laplacian_score ’ );
+           
 and one line code to activate a joint MI based FR algorithm [5], a supervised method, 
 is shown as below,
-            r = matFR_interface ( X, ‘b9_mi_joint ’ , Y).
+
+####  r = matFR_interface ( X, ‘b9_mi_joint ’ , Y).
+            
 Note that the short names of all FR methods are listed in the ‘demo.m’ file. As for further details, 
 please refer to the publications and algorithm implementations.
 
