@@ -4,7 +4,7 @@
 
 
 
-Background: 
+#### Background
 
   To collect thousands of features becomes feasible in medical imaging and biology, and thus, 
 how to figure out these informative and discriminative ones becomes urgently important. 
@@ -14,7 +14,7 @@ or newly developed algorithms.
 
 
 
-Methods: 
+#### Methods 
 
   The matFR toolbox has already integrated 42 methods. Among them, 12 methods are from FSLib [1], 
 9 methods from mutual information (MI) based feature selection repository [2], 7 methods are used 
@@ -26,7 +26,7 @@ methods, 8 statistical analysis based methods, 8 structure learning based method
 
 
 
-An example:
+#### An example
 
   Given an input matrix X (m instances and n features per instance) and its corresponding labels Y 
 (Y ∈ {0, 1}), the procedure of using one (f) of the FR methods (F) in the toolbox can be described 
@@ -53,7 +53,7 @@ please refer to the publications and algorithm implementations.
 
 
 
-Implementation:
+#### Implementation
 
 The toolbox is mainly implemented with MATLAB, while the MI based methods require a C++ compiler to 
 compile two cpp files. One file aims for computing the pairwise MI matrix between feature-feature and 
@@ -64,7 +64,7 @@ Visual C++ 2012/2015/2017.
 
 
 
-Future work
+#### Future work
 
 The future work arises from three aspects. First, to integrate available FR methods into the toolbox and 
 to follow up newly developed methods. The most promising way is contributions from algorithm developers 
@@ -73,7 +73,7 @@ some advanced discretization algorithms (CAIR [6] and CAIM [7]) could be adopted
 diverse options. Last but not the least, to accelerate the distribution of these FR algorithms, the toolbox 
 could be implemented in Python and R.
 
-Reference:
+#### Reference:
 
 [1] Roffo, G. (2016) Feature selection library (MATLAB toolbox), arXiv preprint, arXiv, 1607.01327.
 
