@@ -1,8 +1,6 @@
 
 # matFR: A matlab toolbox for feature ranking
 
-if the matFR toolbox is useful, please refer to 
-  Zhang, Z., Liang, X., Yu, S. and Xie, Y. (2020) matFR: a matlab toolbox for feature ranking.
 
 
 
@@ -101,3 +99,7 @@ from continuous and mixed-mode data, IEEE Transactions on Pattern Analysis and M
 Engineering, 16(2), 145-153.
     
 
+
+#### if the matFR toolbox is useful, please refer to 
+  Zhang, Z., Liang, X., Yu, S. and Xie, Y. (2020) matFR: a matlab toolbox for feature ranking.
+  
