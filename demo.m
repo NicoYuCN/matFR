@@ -18,7 +18,7 @@
 % 
 % =========================================================================
 clear; close all; clc;
-addpath(genpath('FRem'));
+addpath(genpath('algorithms'));
 
 miFRmethod = {  'a1_mi_battiti', 'a2_mi_step_wise', ...
                 'b1_mi_cond_infomax_learn', ...
