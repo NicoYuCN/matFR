@@ -1,6 +1,5 @@
-# matFR
 
-matFR: A matlab toolbox for feature ranking
+# matFR: A matlab toolbox for feature ranking
 
 if the matFR toolbox is useful, please refer to 
   Zhang, Z., Liang, X., Yu, S. and Xie, Y. (2020) matFR: a matlab toolbox for feature ranking.
