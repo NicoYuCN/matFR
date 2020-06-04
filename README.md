@@ -61,26 +61,11 @@ please refer to the publications and algorithm implementations.
 
 The toolbox is mainly implemented with MATLAB, while the MI based methods require a C++ compiler to 
 compile two cpp files. One file aims for computing the pairwise MI matrix between feature-feature and 
-feature-class, and the other is for the joint MI matrix. 
+feature-class, and the other is for the joint MI matrix. For ease of use, the authors have compiled 
+these two files, and the users can use the toolbox without further compilation. 
 
-The matFR toolbox has been tested on 64-bit Windows 7/8/10 systems, MATLAB R2018a/R2019a and Microsoft 
-Visual C++ 2012/2015/2017.
+The matFR toolbox has been tested on 64-bit Windows 7/8/10 systems and MATLAB R2018a/R2019a.
 
-Note that the first time using the toolbox, you should first compile the cpp files as below, 
-
-(0) launch MATLAB
-
-(1) turn to the directory "algorithms\mi_mex"
-
-(2) commands under MATLAB
-
-    (2.1) mex -setup  xxx %%% please follow the directions provided by MATLAB
-	
-	(2.2) mex computeCMImatrix_4.cpp
-	
-	(2.3) mex computeMImatrix_4.cpp
-
-At last, it will generate two built mex files, as computeCMImatrix_4.mexw64 and computeMImatrix_4.mexw64.
 
 
 #### Future work
