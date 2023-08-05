@@ -11,11 +11,11 @@ The matFR toolbox has already integrated 42 methods. Among them, 12 methods are 
 
 **An example**
 <br />
-Given an input matrix $\`X\`$ (m instances and n features per instance) and its corresponding labels Y (Y ∈ {0, 1}), the procedure of using one (f) of the FR methods (F) in the toolbox can be described as r = F(X, f, Y ), where r stands for the output rank indexes of features in a descending order with regard to the relative importance of features. If an unsupervised method is selected, the class labels Y can be omitted.
+Given an input matrix $X$ ($m$ instances and n features per instance) and its corresponding labels $Y$ ($Y \in \{0, 1\}$), the procedure of using one ($f$) of the FR methods ($F$) in the toolbox can be described as $r = F(X, f, Y )$, where $r$ stands for the output rank indexes of features in a descending order with regard to the relative importance of features. If an unsupervised method is selected, the class labels $Y$ can be omitted.
 <br />
-As shown in Figure under the folder "how2use", a user can activate any FR methods through an interface function ‘matFR_interface.m’ which determines the belonging of a method f. If f is a MI based FR method, the function ‘matFR_mi.m’ is triggered, else the other function ‘matFR_fn.m’ is activated.
+As shown in Figure under the folder "how2use", a user can activate any FR methods through an interface function ‘matFR_interface.m’ which determines the belonging of a method f. If $f$ is a MI based FR method, the function ‘matFR_mi.m’ is triggered, else the other function ‘matFR_fn.m’ is activated.
 <br />
-In details, an example is demonstrated. Given the BCDR-F03 data set (bcdr_data_whole.mat), it contains 406 lesions and 736 mammographic images [3]. To each annotated image, 17 features are selected to quantify the lesions from mass intensity, contour shape and lesion texture. Among the mass lesions, 230 are histologically verified benign (y = 0) and 176 are malignant (y = 1). Thus, to the input matrix X, m = 736 and n = 17. After the data is prepared, one line code to activate the Laplacian Score algorithm [4], an unsupervised method, is shown as below,
+In details, an example is demonstrated. Given the BCDR-F03 data set (bcdr_data_whole.mat), it contains 406 lesions and 736 mammographic images [3]. To each annotated image, 17 features are selected to quantify the lesions from mass intensity, contour shape and lesion texture. Among the mass lesions, 230 are histologically verified benign ($y = 0$) and 176 are malignant ($y = 1$). Thus, to the input matrix $X$, $m = 736$ and $n = 17$. After the data is prepared, one line code to activate the Laplacian Score algorithm [4], an unsupervised method, is shown as below,
 
 #####  r = matFR_interface ( X, ‘h2_fir_laplacian_score ’ );
            
