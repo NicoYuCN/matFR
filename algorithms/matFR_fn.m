@@ -6,7 +6,8 @@ function [ r ] = matFR_fn( X, f, Y, m4norm )
 %   Dedicated to methods excluding mutual information (MI) methods
 % -------------------------------------------------------------------------
 % if the matFR toolbox is useful, please refer to
-%       Zhang, Zhicheng, et al. "matFR: a matlab toolbox for feature ranking"
+%     Zhang Z, Liang X, Qin W, Yu S, Xie Y. matFR: a MATLAB toolbox for 
+%               feature ranking. Bioinformatics. 2020 Oct 1;36(19):4968-9.
 % -------------------------------------------------------------------------
 % Inputs
 %       X,      a matrix shows samples and their features
@@ -226,6 +227,12 @@ switch (selection_method)
         r = rank_fir_robust_unsupervised( X );
         fprintf('...................................................................\n');
     % (1.31)
+    case 'm1_fir_self_growing_forest' 
+        fprintf('...(m1_fir_self_growing_forest)...\n')
+        fprintf( '===*** 2022. Robust unsupervised feature selection ...===\n' );
+        r = rank_self_growing_forest( X, Y );
+        fprintf('...................................................................\n');
+    %
     otherwise
         fprintf( 'Please check the method \n' );
         r = [];

@@ -51,17 +51,27 @@ fnFRmethod = {  'd1_mat_ttest', 'd2_mat_entropy', ...
                 'k1_fir_joint_embed_learn_sparse_regression', ...
                 'k2_fir_spectrum_info_graph_laplacian', ...
                 'k3_fir_nonneg_spectral_analysis', ...
-                'k4_fir_robust_unsupervised'}; % 30 methods
+                'k4_fir_robust_unsupervised', ...
+				'm1_fir_self_growing_forest'}; % 31 methods
 
 % -------------------------------------------------------------------------
 % (1) load the data set
 load bcdr_data_whole
+%
+iteRank = zeros(43, 17);
+%
 for ii = 1 : length(miFRmethod)
     f = miFRmethod{ii};
     r = matFR_interface(X, f, Y);
+    %
+    iteRank(ii, :) = r;
 end
 
-for jj = 1 : length(fnFRmethod)
+for jj = length(fnFRmethod)
     f = fnFRmethod{jj};
     r = matFR_interface(X, f, Y);
+    %
+    iteRank(ii+jj, :) = r;
 end
+
+

@@ -6,7 +6,8 @@ function [ r ] = matFR_mi( X, f, Y, m4norm, nbin )
 %   Dedicated to mutual information (MI) based methods
 % -------------------------------------------------------------------------
 % if the matFR toolbox is useful, please refer to
-%       Zhang, Zhicheng, et al. "matFR: a matlab toolbox for feature ranking"
+%     Zhang Z, Liang X, Qin W, Yu S, Xie Y. matFR: a MATLAB toolbox for 
+%               feature ranking. Bioinformatics. 2020 Oct 1;36(19):4968-9.
 % -------------------------------------------------------------------------
 % Inputs
 %       X,      a matrix shows samples and their features

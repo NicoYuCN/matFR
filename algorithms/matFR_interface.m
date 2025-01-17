@@ -3,16 +3,19 @@ function [r] = matFR_interface(X, f, Y)
 % Zhicheng Zhang, Xiaokun Liang, Shaode Yu, Yaoqin Xie
 % June 3, 2020
 % Email: yushaodemia@163.com
+%
 %   An interface function between user input and activated algorithms
 % -------------------------------------------------------------------------
 % if the matFR toolbox is useful, please refer to
-%       Zhang, Zhicheng, et al. "matFR: a matlab toolbox for feature ranking"
+%     Zhang Z, Liang X, Qin W, Yu S, Xie Y. matFR: a MATLAB toolbox for 
+%               feature ranking. Bioinformatics. 2020 Oct 1;36(19):4968-9.
 % -------------------------------------------------------------------------
 % Inputs
 %       X,      a matrix shows samples and their features
 %                   its size [m, n] indicates m samples and n featuers per sample
 %       f,      a feature selection method
-%       Y,      the corresponding labels to each samples
+%       Y,      the corresponding labels to each samples 
+%                           when using supervised learning algorithms
 %                   its size [m, 1] and the Y values are in {0, 1}
 %
 % Output
@@ -21,6 +24,7 @@ function [r] = matFR_interface(X, f, Y)
 % -------------------------------------------------------------------------
 % (0) to check the input parameters
 flag = 0; % a flag for supervised methods
+%
 if nargin < 3
     fprintf('WARNING: An unsupervised learning method ...\n');
     flag = 1; % unsupervised
@@ -42,7 +46,7 @@ miFRmethod = {  'a1_mi_battiti', 'a2_mi_step_wise', ...
                 'b7_mi_quad_program', ...
                 'b8_mi_min_redundancy', ...
                 'b9_mi_joint', ...
-                'c1_mi_giorgio'}; % 12 MI based methods
+                'c1_mi_giorgio'}; % % 12 mutual information (MI)-based methods
             
 fnFRmethod = {  'd1_mat_ttest', 'd2_mat_entropy', ...
                 'd3_mat_bhattacharyya', 'd4_mat_roc', ...
@@ -63,10 +67,11 @@ fnFRmethod = {  'd1_mat_ttest', 'd2_mat_entropy', ...
                 'k1_fir_joint_embed_learn_sparse_regression', ...
                 'k2_fir_spectrum_info_graph_laplacian', ...
                 'k3_fir_nonneg_spectral_analysis', ...
-                'k4_fir_robust_unsupervised'}; % 30 methods
+                'k4_fir_robust_unsupervised' ...
+				'm1_fir_self_growing_forest'}; % 30 methods
 
 % -------------------------------------------------------------------------
-% (2) to run a FR method
+% (2) to run a feature ranking (FR) method
 
 if sum( double(ismember(miFRmethod, f)) ) % a MI based FR method
     if 1 == flag
@@ -74,12 +79,14 @@ if sum( double(ismember(miFRmethod, f)) ) % a MI based FR method
     else
         r = matFR_mi( X, f, Y );
     end
+    %------------------------------------------------------------------
 elseif sum( double(ismember(fnFRmethod, f)) ) % a FR method, but not MI
     if 1 == flag
         r = matFR_fn( X, f ); % an unsupervised method
     else
         r = matFR_fn( X, f, Y );
     end
+    %------------------------------------------------------------------
 else
     fprintf('ERROR: unseen FR method ...\n');
     r = [];
