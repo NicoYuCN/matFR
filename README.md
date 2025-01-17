@@ -1,4 +1,6 @@
-
+Jan 17, 2025, added a feature ranking algorithm {self_growing_forest}
+<br />
+<br />
 *Here shows **matFR**, a matlab toolbox for feature ranking*
 
 **Background**
